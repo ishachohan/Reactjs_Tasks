@@ -1,9 +1,26 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
+import Header from "./Header"
+import React from 'react';
+
+const Footer = React.createElement(
+  'footer',
+  {
+    style : {textAlign: 'center'}
+  },
+  
+  'ReactJs Mentoring Program Task by isha chohan'
+  )
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
+      <Header title="HomeTask for the Reactjs Learn Program"/>
+      <Counter />
+      {Footer}
+    </div>
+   /* <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,11 +32,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Hello World!!!
         </a>
       </header>
-    </div>
-  );
+
+    </div> */
+  )
 }
 
 export default App;
