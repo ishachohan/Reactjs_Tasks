@@ -1,6 +1,7 @@
-import React,{Component} from "react";
+import React,{PureComponent} from "react";
+import NumberStatus from "./NumberStatus"
 
-class Counter extends Component{
+class Counter extends PureComponent{
 
     constructor(){
         super()
@@ -33,6 +34,7 @@ class Counter extends Component{
             <div>
                 <div style={{textAlign: 'center', alignSelf : 'center'}}><br/><br/><br/><br/>
                     <h1>{this.state.count}</h1>
+                    <NumberStatus currentnumber={this.state.count} />
                     <div>
                         <button className="btn btn-primary" onClick = {this.handleClickIncrease}> Increase Value(++) </button>{'  '}
                         <button className="btn btn-primary" onClick={this.handleClickDecrease}> Decrease Value(--) </button>
